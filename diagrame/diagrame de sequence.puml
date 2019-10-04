@@ -1,0 +1,34 @@
+@startuml
+PrincipaleCafe -> BoissonChantilly: toString()
+activate BoissonChantilly
+BoissonChantilly -> BoissonChantilly: cout()
+BoissonChantilly -> BoissonChantilly2: cout()
+activate BoissonChantilly2
+BoissonChantilly2 -> BoissonCreme: cout()
+activate BoissonCreme
+BoissonCreme -> Deca: cout()
+activate Deca
+Deca -> BoissonCreme
+deactivate Deca
+BoissonCreme -> BoissonChantilly2
+deactivate BoissonCreme
+BoissonChantilly2 -> BoissonChantilly
+deactivate BoissonChantilly2
+
+BoissonChantilly -> BoissonChantilly: getDescription()
+BoissonChantilly -> BoissonChantilly2: getDescription()
+activate BoissonChantilly2
+BoissonChantilly2 -> BoissonCreme: getDescription()
+activate BoissonCreme
+BoissonCreme -> Deca: getDescription()
+activate Deca
+Deca -> BoissonCreme
+deactivate Deca
+BoissonCreme -> BoissonChantilly2
+deactivate BoissonCreme
+BoissonChantilly2 -> BoissonChantilly
+deactivate BoissonChantilly2
+BoissonChantilly -> PrincipaleCafe
+deactivate BoissonChantilly
+
+@enduml
