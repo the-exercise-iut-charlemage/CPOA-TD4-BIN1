@@ -2,7 +2,7 @@
 
 interface Logo {
     # nom: String
-    # prix: double
+    # prix: Double
     + getLogo(): MyImage
     + combienCaCoute(): double
 }
