@@ -14,7 +14,6 @@ BoissonCreme -> BoissonChantilly2
 deactivate BoissonCreme
 BoissonChantilly2 -> BoissonChantilly
 deactivate BoissonChantilly2
-
 BoissonChantilly -> BoissonChantilly: getDescription()
 BoissonChantilly -> BoissonChantilly2: getDescription()
 activate BoissonChantilly2

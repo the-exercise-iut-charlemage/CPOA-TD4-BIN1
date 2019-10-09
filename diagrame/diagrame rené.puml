@@ -27,9 +27,10 @@ class Lunette {
     + combienCaCoute(): double
 }
 
-Logo <|-- ReneLaTaupe
-Logo <|-- Decoration
+Logo <|.-- ReneLaTaupe
+Logo <|.-- Decoration
 Decoration <|-- Chapeau
 Decoration <|-- Lunette
+Decoration "*" --> "1" Logo: - logo
 
 @enduml
