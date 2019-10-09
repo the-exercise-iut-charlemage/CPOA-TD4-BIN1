@@ -17,7 +17,7 @@ public class ReneLaTaupe{
      * Constructeur
      */
     public ReneLaTaupe() {
-        nomIm = "img/Taupe.jpg";
+        nomIm = "src/img/Taupe.jpg";
         prix=3.65;
     }
     
