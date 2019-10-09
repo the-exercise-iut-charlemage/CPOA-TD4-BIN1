@@ -1,0 +1,35 @@
+@startuml
+
+interface Logo {
+    # nom: String
+    # prix: double
+    + getLogo(): MyImage
+    + combienCaCoute(): double
+}
+class ReneLaTaupe {
+    + ReneLaTaupe()
+    + getLogo(): MyImage
+    + combienCaCoute(): double
+}
+abstract class Decoration {
+    + Decoration(Logo)
+    + getLogo(): MyImage
+    + combienCaCoute(): double
+}
+class Chapeau {
+    + Decoration(Logo)
+    + getLogo(): MyImage
+    + combienCaCoute(): double
+}
+class Lunette {
+    + Decoration(Logo)
+    + getLogo(): MyImage
+    + combienCaCoute(): double
+}
+
+Logo <|-- ReneLaTaupe
+Logo <|-- Decoration
+Decoration <|-- Chapeau
+Decoration <|-- Lunette
+
+@enduml
