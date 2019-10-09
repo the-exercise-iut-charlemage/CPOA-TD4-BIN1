@@ -13,7 +13,11 @@ public abstract class Decoration extends Logo {
         this.y = y;
     }
 
-    public abstract MyImage getLogo();
+    public MyImage getLogo() {
+        MyImage logo = this.l.getLogo();
+        logo.paintOver(this.nom, this.x, this.y);
+        return logo;
+    }
 
     public double combienCaCoute() {
         return l.combienCaCoute() + prix;
