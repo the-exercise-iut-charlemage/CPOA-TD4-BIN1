@@ -1,6 +1,6 @@
 @startuml
 
-interface Logo {
+abstract Logo {
     # nom: String
     # prix: Double
     + getLogo(): MyImage

@@ -1,22 +1,21 @@
 package logo;
 
-import java.awt.*;
-
 public abstract class Decoration extends Logo {
 
-    Logo l;
+    protected Logo l;
+    protected int x, y;
 
-    public Decoration(String img, double prix, Logo l){
+    public Decoration(String img, double prix, Logo l, int x, int y){
         this.l = l;
         this.nom = img;
         this.prix = prix;
+        this.x = x;
+        this.y = y;
     }
 
-    public MyImage getLogo(){
-        return new MyImage(nom);
-    }
+    public abstract MyImage getLogo();
 
-    public double combienCaCoute(){
+    public double combienCaCoute() {
         return l.combienCaCoute() + prix;
     }
 }

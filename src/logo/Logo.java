@@ -1,7 +1,5 @@
 package logo;
 
-import java.awt.*;
-
 public abstract class Logo {
 
     protected String nom;
