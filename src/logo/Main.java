@@ -8,6 +8,9 @@ public class Main {
         Logo logo = new Chapeau(280, 42, new Lunette(255, 76, new Lunette(100, 150, new Candy(425, 200, new Smiley(255, 225, new ReneLaTaupe())))));
         logo.getLogo().display();
 
+        Logo logo2 = new Chapeau(280, 42, new Lunette(255, 76, new Lunette(100, 150, new Candy(425, 200, new Smiley(255, 225, new CrazyFrog())))));
+        logo2.getLogo().display();
+
 
     }
 
