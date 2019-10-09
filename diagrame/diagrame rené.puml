@@ -3,8 +3,8 @@
 abstract Logo {
     # nom: String
     # prix: Double
-    + getLogo(): MyImage
-    + combienCaCoute(): double
+    + abstract getLogo(): MyImage
+    + abstract combienCaCoute(): double
 }
 class ReneLaTaupe {
     + ReneLaTaupe()
@@ -12,24 +12,36 @@ class ReneLaTaupe {
     + combienCaCoute(): double
 }
 abstract class Decoration {
+    # x
+    # y
+    + Decoration(Logo)
+    + getLogo(): MyImage
+    + combienCaCoute(): double
+}
+class Smiley {
+    + Decoration(Logo)
+}
+class Candy {
+    + Decoration(Logo)
+}
+class CrazyFrog {
     + Decoration(Logo)
     + getLogo(): MyImage
     + combienCaCoute(): double
 }
 class Chapeau {
     + Decoration(Logo)
-    + getLogo(): MyImage
-    + combienCaCoute(): double
 }
 class Lunette {
     + Decoration(Logo)
-    + getLogo(): MyImage
-    + combienCaCoute(): double
 }
 
-Logo <|.-- ReneLaTaupe
-Logo <|.-- Decoration
+Logo <|-- ReneLaTaupe
+Logo <|-- CrazyFrog
+Logo <|-- Decoration
 Decoration <|-- Chapeau
+Decoration <|-- Smiley
+Decoration <|-- Candy
 Decoration <|-- Lunette
 Decoration "*" --> "1" Logo: - logo
 
